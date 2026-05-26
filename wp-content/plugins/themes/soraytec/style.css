@@ -1,0 +1,58 @@
+/*!
+Theme Name: Soraytec
+Theme URI: http://www.soraytec.com/
+Author: Yatnam
+Author URI: https://yatnam.com/
+Description: Soraytec is a custom theme buillt for exclusive use of Soraytec AG blog and Website
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: soraytec
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Theme Style Overrides
+
+--------------------------------------------------------------*/
+
+
+/* Theme Style Overrides
+	 ========================================================================== */
+.wpcf7-response-output{
+	color:#000;
+}
+.about-outer h1.error-page{
+	font-size: 50px;
+}
+.navbar-nav.privacy {
+	flex-direction: row;
+	justify-content: center;
+}
+.navbar-nav.privacy li a.nav-link {
+	color: hsl(0, 0%, 100%);
+    font-size: 17px;
+    transition: all 0.3s ease 0s;
+    padding: 0px 20px;
+}
+@media screen and (max-width: 1200px) {
+	.navbar-nav.privacy li a.nav-link {
+    	padding: 0px 16px;
+  	}
+}
+@media screen and (max-width: 991px) {
+ 	.navbar-nav.privacy li a.nav-link {
+    	padding: 0px 7px;
+  	}
+}
+@media screen and (max-width: 575px) {
+ 	.navbar-nav.privacy {
+    	flex-direction:column;
+  	}
+}
