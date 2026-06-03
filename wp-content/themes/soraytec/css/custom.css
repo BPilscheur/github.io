@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Roboto:300,400,500,700&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #666;
     line-height: 26px;
 }
-h1, h2, h3, h4, h5, ul, ol, li, p, figure{
+h1, h2, h3, h4, h5, ul, ol, li, p, figure {
     padding: 0px;
     margin: 0px;
 }
-ul, ol, li{
+ul, ol, li {
     list-style: none;
 }
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     font-family: 'Anton', sans-serif;
 }
-a:hover{
+a:hover {
     text-decoration: none;
 }
-button:focus, select:focus{
+button:focus, select:focus {
     outline: none;
 }
-input:focus, textarea:focus{
+input:focus, textarea:focus {
     box-shadow: none !important;
 }
 ::-moz-selection {
@@ -38,10 +38,10 @@ input:focus, textarea:focus{
 /* ================================================== */
 /* Header */ 
 /* ================================================== */
-.bg-light{
-    background: none!important;
+.bg-light {
+    background: none !important;
 }
-.navbar-brand img{
+.navbar-brand img {
     max-width: 100%;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -58,25 +58,25 @@ input:focus, textarea:focus{
 .navbar-light .navbar-nav .active > .nav-link, 
 .navbar-light .navbar-nav .nav-link.active, 
 .navbar-light .navbar-nav .nav-link.show, 
-.navbar-light .navbar-nav .show > .nav-link{
+.navbar-light .navbar-nav .show > .nav-link {
     color: #0e9dbc;
 }
 
 /* ================================================== */
 /* Banner */ 
 /* ================================================== */
-.banner{
+.banner {
     height: 670px;
     padding: 50px 0 0;
     border-bottom: 17px solid #5b5b5b;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/home-banner-bg.png) no-repeat center bottom / 100%;
+    background: url(../images/home-banner-bg.png) no-repeat center bottom / 100%;
 }
-.banner h1{
+.banner h1 {
     padding: 20px 0 75px 0;
     font-size: 56px;
     color: #0c525e;
 }
-.banner p{
+.banner p {
     padding: 15px;
     font-size: 22px;
     color: #f7941d;
@@ -85,83 +85,83 @@ input:focus, textarea:focus{
     border-radius: 20px;
     margin-left: -15px;
 }
-.banner .right figure img{
+.banner .right figure img {
     max-width: 100%;
 }
 
 /* ================================================== */
 /* About */ 
 /* ================================================== */
-.about-sec{
+.about-sec {
     padding: 60px 0 120px 0;
     background: #f1f1f1;
     position: relative;
 }
-.about-sec:after{
+.about-sec:after {
     width: 100%;
     height: 51px;
     position: absolute;
     bottom: 0;
     left: 0;
     content: "";
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/about-sec-crv.png) repeat-x center bottom;
+    background: url(../images/about-sec-crv.png) repeat-x center bottom;
 }
-.about-sec h2{
+.about-sec h2 {
     padding: 85px 0 10px 0;
     font-size: 48px;
     color: #f7941d;
 }
-.about-sec p{
+.about-sec p {
     font-size: 30px;
     color: #232020;
     line-height: 38px;
 }
-.about-sec figure img{
+.about-sec figure img {
     max-width: 100%;
 }
-.about-sec .vision{
+.about-sec .vision {
     margin-bottom: 60px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/vision-bg.png) repeat-x left 85%;
+    background: url(../images/vision-bg.png) repeat-x left 85%;
 }
-.about-sec .vision .inner{
+.about-sec .vision .inner {
     max-width: 595px;
     padding-left: 10px;
 }
-.about-sec .mission{
+.about-sec .mission {
     margin-bottom: 60px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/mission-bg.png) repeat-x left 90%;
+    background: url(../images/mission-bg.png) repeat-x left 90%;
 }
-.about-sec .mission .inner{
+.about-sec .mission .inner {
     max-width: 530px;
     padding: 0 35px 0 0;
     margin-left: auto;
 }
-.about-sec .mission h2{
+.about-sec .mission h2 {
     color: #0e9dbc;
 }
-.about-sec .values{
+.about-sec .values {
     margin-bottom: 60px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/values-bg.png) repeat-x left 92%;
+    background: url(../images/values-bg.png) repeat-x left 92%;
 }
 
 /* ================================================== */
 /* Soraytec Ecosystem */ 
 /* ================================================== */
-.soraytec-ecosystem{
+.soraytec-ecosystem {
     padding: 60px 0 30px 0;
 }
-.soraytec-ecosystem h2{
+.soraytec-ecosystem h2 {
     padding-bottom: 20px;
     font-size: 40px;
     color: #063a45;
     text-align: center;
 }
-ul.logos-list{
+ul.logos-list {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
 }
-ul.logos-list li{
+ul.logos-list li {
     margin: 30px 0;
     text-align: center;
     display: -ms-flexbox;
@@ -174,14 +174,14 @@ ul.logos-list li{
     -webkit-justify-content: center;
     justify-content: center;
 }
-ul.logos-list li a{
+ul.logos-list li a {
     display: inline-block;
 }
-ul.logos-list li a img{
+ul.logos-list li a img {
     max-width: 100%;
     transition: all 0.3s;
 }
-ul.logos-list li a:hover img{
+ul.logos-list li a:hover img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.7;
@@ -190,62 +190,62 @@ ul.logos-list li a:hover img{
 /* ================================================== */
 /* Footer */ 
 /* ================================================== */
-.footer{
+.footer {
     padding: 110px 0 70px 0;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/footer-crv.png) repeat-x center top #181818;
+    background: url(../images/footer-crv.png) repeat-x center top #181818;
     color: #fff;
     text-align: center;
     position: relative;
 }
-.footer .top{
+.footer .top {
     margin-bottom: 50px;
 }
-.footer a.foot-logo{
+.footer a.foot-logo {
     display: inline-block;
 }
-.footer a.foot-logo img{
+.footer a.foot-logo img {
     max-width: 100%;
 }
-.footer h4{
+.footer h4 {
     padding-bottom: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 25px;
 }
-.footer .contact a.mail{
+.footer .contact a.mail {
     display: inline-block;
     margin-top: 15px;
     font-size: 17px;
     color: #fff;
     transition: all 0.3s;
 }
-.footer .contact a.mail:hover{
+.footer .contact a.mail:hover {
     color: #0e9dbc;
 }
-ul.follow-us li{
+ul.follow-us li {
     display: inline-block;
     padding: 0 12px;
 }
-ul.follow-us li a{
+ul.follow-us li a {
     font-size: 30px;
     color: #fff;
     transition: all 0.3s;
 }
-ul.follow-us li a:hover{
+ul.follow-us li a:hover {
     color: #0e9dbc;
 }
 ul.follow-us li a .fab {
     font-family: "Font Awesome 5 Brands", FontAwesome;
 }
-.footer a.privacy{
+.footer a.privacy {
     font-size: 17px;
     color: #fff;
     transition: all 0.3s;
 }
-.footer a.privacy:hover{
+.footer a.privacy:hover {
     color: #0e9dbc;
 }
-.copyright{
+.copyright {
     margin-left: auto;
     font-size: 17px;
     color: #fff;
@@ -254,56 +254,56 @@ ul.follow-us li a .fab {
 /* ================================================== */
 /* About Us Page */ 
 /* ================================================== */
-.inner-outer{
+.inner-outer {
     padding-bottom: 60px;
 }
-.about-outer{
+.about-outer {
     margin-top: 30px;
     padding-bottom: 20px;
 }
-.about-banner{
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/about-banner-bg.png) repeat-x center top / 100%;
+.about-banner {
+    background: url(../images/about-banner-bg.png) repeat-x center top / 100%;
 }
-.about-banner h1{
+.about-banner h1 {
     padding-top: 20px;
 }
-.about-banner .about-desc{
+.about-banner .about-desc {
     padding: 30px 40px;
     background: #286670;
     border-radius: 20px;
 }
-.about-banner .about-desc p{
+.about-banner .about-desc p {
     font-size: 20px;
     color: #fff;
     line-height: 26px;
     text-align: justify;
 }
-.history{
+.history {
     padding: 25px 0 220px 0;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/history-bg.png) repeat-x left bottom;
+    background: url(../images/history-bg.png) repeat-x left bottom;
     overflow: hidden;
 }
-.about-outer .history h1{
+.about-outer .history h1 {
     padding-bottom: 20px;
     color: #f7941d;
 }
 .about-outer .history .show-mob,
-ul.timeline > li .collapse-cnt{
+ul.timeline > li .collapse-cnt {
     display: none;
 }
-ul.history-cnt li{
+ul.history-cnt li {
     display: none;
 }
-ul.history-cnt li.active{
+ul.history-cnt li.active {
     display: block;
 }
-ul.history-cnt .left{
+ul.history-cnt .left {
     padding-top: 20px;
 }
-ul.history-cnt .left .title{
+ul.history-cnt .left .title {
     position: relative;
 }
-ul.history-cnt .left .title:after{
+ul.history-cnt .left .title:after {
     width: 100%;
     height: 2px;
     display: block;
@@ -313,7 +313,7 @@ ul.history-cnt .left .title:after{
     left: 30px;
     bottom: 34px;
 }
-ul.history-cnt .left h2{
+ul.history-cnt .left h2 {
     display: inline-block;
     padding: 0 8px 20px 0;
     font-family: 'Roboto', sans-serif;
@@ -324,15 +324,15 @@ ul.history-cnt .left h2{
     position: relative;
     z-index: 2;
 }
-ul.history-cnt .left p{
+ul.history-cnt .left p {
     font-size: 20px;
     color: #000;
     line-height: 26px;
 }
-ul.history-cnt .right{
+ul.history-cnt .right {
     min-height: 390px;
 }
-ul.timeline{
+ul.timeline {
     margin: 40px 0 0;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -340,14 +340,14 @@ ul.timeline{
     position: relative;
     margin-left: -4%;
 }
-ul.timeline > li{
+ul.timeline > li {
     max-width: 162px;
     flex: 0 0 162px;
     text-align: center;
     position: relative;
 }
 ul.timeline > li:before,
-ul.timeline > li:after{
+ul.timeline > li:after {
     width: calc(50% + 1px);
     height: 10px;
     display: block;
@@ -357,27 +357,27 @@ ul.timeline > li:after{
     top: 50%;
     transform: translateY(-50%);
 }
-ul.timeline > li:before{
+ul.timeline > li:before {
     left: 0;
 }
-ul.timeline > li:after{
+ul.timeline > li:after {
     left: 50%;
 }
-ul.timeline > li:first-child:before{
+ul.timeline > li:first-child:before {
     display: none;
 }
-ul.timeline > li:last-child .inner:after{
+ul.timeline > li:last-child .inner:after {
     width: 0;
     height: 0;
-	left: calc(100% - 2px);
-	top: 20px;
-	border: solid transparent;
-	content: " ";
-	position: absolute;
-	border-left-color: #393939;
-	border-width: 16px;
+    left: calc(100% - 2px);
+    top: 20px;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-left-color: #393939;
+    border-width: 16px;
 }
-ul.timeline > li .circle{
+ul.timeline > li .circle {
     width: 72px;
     height: 72px;
     display: inline-block;
@@ -391,7 +391,7 @@ ul.timeline > li .circle{
     position: relative;
     z-index: 2;
 }
-ul.timeline > li .circle:after{
+ul.timeline > li .circle:after {
     width: 35px;
     height: 19px;
     display: block;
@@ -402,30 +402,30 @@ ul.timeline > li .circle:after{
     margin: 0 auto;
 }
 ul.timeline > li:nth-child(2) .circle,
-ul.timeline > li:nth-child(2) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(2) .timeline-cnt ul li:before {
     background: #e1a52e;
 }
 ul.timeline > li:nth-child(3) .circle,
-ul.timeline > li:nth-child(3) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(3) .timeline-cnt ul li:before {
     background: #c9b335;
 }
 ul.timeline > li:nth-child(4) .circle,
-ul.timeline > li:nth-child(4) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(4) .timeline-cnt ul li:before {
     background: #8cc347;
 }
 ul.timeline > li:nth-child(5) .circle,
-ul.timeline > li:nth-child(5) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(5) .timeline-cnt ul li:before {
     background: #76b96a;
 }
 ul.timeline > li:nth-child(6) .circle,
-ul.timeline > li:nth-child(6) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(6) .timeline-cnt ul li:before {
     background: #5bb089;
 }
 ul.timeline > li:nth-child(7) .circle,
-ul.timeline > li:nth-child(7) .timeline-cnt ul li:before{
+ul.timeline > li:nth-child(7) .timeline-cnt ul li:before {
     background: #169fbc;
 }
-ul.timeline > li .timeline-cnt{
+ul.timeline > li .timeline-cnt {
     width: 200px;
     position: absolute;
     top: 72px;
@@ -435,12 +435,11 @@ ul.timeline > li .timeline-cnt{
     text-align: left;
     line-height: 24px;
 }
-
-ul.timeline > li .timeline-cnt ul{
+ul.timeline > li .timeline-cnt ul {
     position: relative;
     padding: 10px 0 0;
 }
-ul.timeline > li .timeline-cnt ul:before{
+ul.timeline > li .timeline-cnt ul:before {
     width: 2px;
     height: calc(100% - 2px);
     content: "";
@@ -450,13 +449,13 @@ ul.timeline > li .timeline-cnt ul:before{
     top: 0;
     background: #393939;
 }
-ul.timeline > li .timeline-cnt ul li{
+ul.timeline > li .timeline-cnt ul li {
     display: block;
     padding-top: 4px;
     font-weight: 500;
     position: relative;
 }
-ul.timeline > li .timeline-cnt ul li:before{
+ul.timeline > li .timeline-cnt ul li:before {
     width: 18px;
     height: 18px;
     content: "";
@@ -466,40 +465,40 @@ ul.timeline > li .timeline-cnt ul li:before{
     background: #f79422;
     border-radius: 50%;
 }
-ul.timeline > li .timeline-cnt ul li a{
+ul.timeline > li .timeline-cnt ul li a {
     color: #231f20;
 }
-.history .mCSB_scrollTools_horizontal{
+.history .mCSB_scrollTools_horizontal {
     visibility: hidden !important;
 }
 .history .mCustomScrollBox,
-.history .mCSB_container{
+.history .mCSB_container {
     overflow: inherit;
 }
-.the-team{
+.the-team {
     padding: 50px 0 0 0;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/team-crv-bg.png) repeat-x left 13%;
+    background: url(../images/team-crv-bg.png) repeat-x left 13%;
 }
-.about-outer .the-team h1{
+.about-outer .the-team h1 {
     padding-bottom: 0px;
     color: #286670;
 }
-.the-team .team-desc{
+.the-team .team-desc {
     padding: 30px 40px;
     margin-top: -30px;
     background: #f7941d;
     border-radius: 20px;
 }
-.the-team .team-desc p{
+.the-team .team-desc p {
     font-size: 20px;
     color: #fff;
     line-height: 26px;
     text-align: justify;
 }
-ul.team-list{
+ul.team-list {
     margin-top: 70px;
 }
-ul.team-list li{
+ul.team-list li {
     margin-bottom: 55px;
     text-align: center;
     color: #000;
@@ -510,7 +509,7 @@ ul.team-list li .inner {
     -o-perspective: 1000;
     perspective: 1000;
 }
-ul.team-list li .inner:hover .flipper{
+ul.team-list li .inner:hover .flipper {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -527,7 +526,7 @@ ul.team-list li .flipper {
     transform-style: preserve-3d;
     position: relative;
 }
-ul.team-list li .front{
+ul.team-list li .front {
     display: block;
     z-index: 2;
 }
@@ -538,11 +537,11 @@ ul.team-list li .back {
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-ul.team-list li .front img{
+ul.team-list li .front img {
     width: 100%;
     display: block;
 }
-ul.team-list li .back{
+ul.team-list li .back {
     width: 100%;
     height: 100%;
     display: -ms-flexbox;
@@ -563,34 +562,34 @@ ul.team-list li .back{
     text-align: left;
     color: #fff;
 }
-ul.team-list li .back p{
+ul.team-list li .back p {
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 24px;
 }
-ul.team-list li .back p:last-child{
+ul.team-list li .back p:last-child {
     margin-bottom: 0px;
 }
-ul.team-list li .back a{
+ul.team-list li .back a {
     display: block;
     margin-left: auto;
     font-size: 26px;
     color: #fff;
 }
-ul.team-list li .source{
+ul.team-list li .source {
     padding: 15px 0 0;
 }
-ul.team-list li .source .name{
+ul.team-list li .source .name {
     display: block;
     padding-bottom: 5px;
     font-size: 20px;
     font-weight: 500;
 }
-ul.team-list li .source span{
+ul.team-list li .source span {
     display: block;
     font-size: 18px;
 }
-.about-outer .video-sec{
+.about-outer .video-sec {
     padding-bottom: 20px;
 }
 .youtube-video {
@@ -608,21 +607,21 @@ ul.team-list li .source span{
     top: 0;
     width: 100%;
 }
-.about-outer .video-sec h1{
+.about-outer .video-sec h1 {
     padding-bottom: 40px;
     color: #f7941d;
 }
-.video-sec .video-outer{
+.video-sec .video-outer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
 }
-.video-sec .video-outer .video{
+.video-sec .video-outer .video {
     width: calc(100% - 233px);
     border: none;
     margin: 0 10px 0 0;
 }
-.video-sec .video-outer .thumbnail{
+.video-sec .video-outer .thumbnail {
     width: 233px;
     padding: 63px 20px;
     margin: 0px;
@@ -631,13 +630,13 @@ ul.team-list li .source span{
     border-radius: 0px;
     overflow: hidden;
 }
-.video-sec .video-outer .thumbnail ul.slides li{
+.video-sec .video-outer .thumbnail ul.slides li {
     margin-bottom: 20px;
 }
-.video-sec .video-outer .thumbnail ul.slides li:last-child{
+.video-sec .video-outer .thumbnail ul.slides li:last-child {
     margin-bottom: 0px;
 }
-.video-sec .flex-direction-nav a{
+.video-sec .flex-direction-nav a {
     width: 37px;
     height: 23px;
     font-size: 0;
@@ -646,23 +645,23 @@ ul.team-list li .source span{
     transform: translateX(-50%);
     opacity: 1;
 }
-.video-sec .flex-direction-nav .flex-next{
+.video-sec .flex-direction-nav .flex-next {
     top: 20px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/up-arrow.png) no-repeat center top / 100%;
+    background: url(../images/up-arrow.png) no-repeat center top / 100%;
 }
-.video-sec .flex-direction-nav .flex-prev{
+.video-sec .flex-direction-nav .flex-prev {
     top: inherit;
     bottom: 20px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/down-arrow.png) no-repeat center top / 100%;
+    background: url(../images/down-arrow.png) no-repeat center top / 100%;
 }
 .video-sec .flex-direction-nav a.flex-prev:before,
 .video-sec .flex-direction-nav a.flex-next:before {
     display: none;
 }
-.signup-sec{
+.signup-sec {
     padding: 40px 0 80px 0;
 }
-.signup-sec .inner{
+.signup-sec .inner {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -673,18 +672,18 @@ ul.team-list li .source span{
     -webkit-justify-content: center;
     justify-content: center;
 }
-.signup-sec h2{
+.signup-sec h2 {
     margin-right: 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     font-weight: 300;
     color: #181818;
 }
-.signup-form .form-group{
+.signup-form .form-group {
     width: 400px;
     margin-right: 15px;
 }
-.signup-form .form-control{
+.signup-form .form-control {
     width: 100%;
     height: 40px;
     padding: 0 15px;
@@ -694,7 +693,7 @@ ul.team-list li .source span{
     font-size: 16px;
     color: #000;
 }
-.signup-form .btn-signup{
+.signup-form .btn-signup {
     padding: 0px;
     background: none;
     border: none;
@@ -703,20 +702,20 @@ ul.team-list li .source span{
     color: #0e9dbc;
     transition: all 0.3s;
 }
-.signup-form .btn-signup:hover{
+.signup-form .btn-signup:hover {
     color: #f7941d;
 }
 
 /* ================================================== */
 /* product Page */ 
 /* ================================================== */
-.prdct-header{
+.prdct-header {
     position: absolute;
     left: 0;
     width: 100%;
 }
-.prdct-banner{
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/prdct-banner-bg.png) no-repeat center top / 100%;
+.prdct-banner {
+    background: url(../images/prdct-banner-bg.png) no-repeat center top / 100%;
     padding: 190px 0px 45px;
     border-bottom: none;
     height: 727px;
@@ -729,7 +728,7 @@ ul.team-list li .source span{
     text-align: center;
     position: relative;
 }
-.prdct-banner .right{
+.prdct-banner .right {
     text-align: center;
 }
 .prdct-banner .left p {
@@ -745,21 +744,21 @@ ul.team-list li .source span{
     width: 100%;
 }
 .prdct-feature-header {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .prdct-feature-header h2 {
-  padding: 0px;
-  font-size: 64px;
-  margin-bottom: 20px;
+    padding: 0px;
+    font-size: 64px;
+    margin-bottom: 20px;
 }
 .prdct-feature-header p {
-  max-width: 780px;
-  margin: auto;
+    max-width: 780px;
+    margin: auto;
 }
 .prdct-feature-cnt li {
-  margin-top: 40px;
-  text-align: center;
+    margin-top: 40px;
+    text-align: center;
 }
 .prdct-feature-cnt li p {
     max-width: 264px;
@@ -781,8 +780,8 @@ ul.team-list li .source span{
     -webkit-justify-content: center;
     justify-content: center;
 }
-.prdct-feature-bottom{
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/prdct-feature-bottom-bg.png) no-repeat center top / 100%;
+.prdct-feature-bottom {
+    background: url(../images/prdct-feature-bottom-bg.png) no-repeat center top / 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -791,32 +790,32 @@ ul.team-list li .source span{
     position: relative;
     z-index: 2;
 }
-.prdct-feature{
+.prdct-feature {
     padding-bottom: 60px;
 }
-.prdct-feature:after{
-    background-image: url(https://soraytec.com/wp-content/themes/soraytec/images/prdct-sec-crv.png);
+.prdct-feature:after {
+    background-image: url(../images/prdct-sec-crv.png);
 }
 .application {
-  padding-top: 80px;
+    padding-top: 80px;
 }
 .application .left {
-  padding-top: 60px;
+    padding-top: 60px;
 }
 .application .left h2 {
-  font-size: 48px;
-  color: #0c525e;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 50px;
+    font-size: 48px;
+    color: #0c525e;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 .application .left ul li {
-  font-size: 27px;
-  color: #231f20;
-  font-weight: 300;
-  margin-top: 22px;
-  padding-left: 25px;
-  position: relative;
+    font-size: 27px;
+    color: #231f20;
+    font-weight: 300;
+    margin-top: 22px;
+    padding-left: 25px;
+    position: relative;
 }
 .application .left ul li::before {
     content: ".";
@@ -827,7 +826,7 @@ ul.team-list li .source span{
     top: 3px;
     line-height: 0px;
 }
-.application .left figure{
+.application .left figure {
     margin-top: 50px;
 }
 .application .right {
@@ -838,19 +837,19 @@ ul.team-list li .source span{
     z-index: 2;
 }
 .application-cnt {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .application-cnt h3 {
-  font-size: 32px;
-  color: #0c525e;
-  text-align: center;
-  margin-bottom: 15px;
+    font-size: 32px;
+    color: #0c525e;
+    text-align: center;
+    margin-bottom: 15px;
 }
-.application-cnt ul{
+.application-cnt ul {
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
 }
-.application-cnt ul li{
+.application-cnt ul li {
     border-bottom: 1px solid #707070;
     padding: 0px 6px;
     display: -ms-flexbox;
@@ -860,7 +859,7 @@ ul.team-list li .source span{
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.application-cnt ul li:last-child{
+.application-cnt ul li:last-child {
     border: none;
 }
 .application-cnt .right-table {
@@ -899,9 +898,9 @@ ul.team-list li .source span{
     color: #242424;
     font-weight: 300;
     line-height: 22px;
-    margin-top: 4px
+    margin-top: 4px;
 }
-.application-cnt .right-table span:first-child{
+.application-cnt .right-table span:first-child {
     margin-top: 0px;
 }
 .features-wrapper:before {
@@ -911,7 +910,7 @@ ul.team-list li .source span{
     top: 0;
     left: 0;
     content: "";
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/prdct-featurs-wrapper-crv.png) repeat-x center bottom;
+    background: url(../images/prdct-featurs-wrapper-crv.png) repeat-x center bottom;
 }
 .features-wrapper {
     padding-top: 230px;
@@ -919,12 +918,12 @@ ul.team-list li .source span{
     z-index: 1;
     padding-bottom: 0px;
 }
-.features-wrapper .right figure{
+.features-wrapper .right figure {
     text-align: center;
     position: relative;
     z-index: 3;
 }
-.features-wrapper .left h2{
+.features-wrapper .left h2 {
     padding-top: 0px;
     padding-bottom: 35px;
 }
@@ -954,7 +953,7 @@ ul.team-list li .source span{
     position: absolute;
     left: 0;
     width: 100%;
-    background-image: url(https://soraytec.com/wp-content/themes/soraytec/images/mission-bg.png);
+    background-image: url(../images/mission-bg.png);
     height: 108px;
     background-repeat: repeat-x;
     bottom: 55px;
@@ -981,7 +980,7 @@ ul.team-list li .source span{
     font-weight: 300;
     transition: all 0.3s;
 }
-.contact-wrapper .right a:hover{
+.contact-wrapper .right a:hover {
     color: #f7941d;
 }
 .contact-wrapper .right {
@@ -991,168 +990,168 @@ ul.team-list li .source span{
 /* ================================================== */
 /* News Page */ 
 /* ================================================== */
-.posts-outer{
+.posts-outer {
     margin-top: 30px;
 }
-.posts-outer .top-post{
+.posts-outer .top-post {
     margin-bottom: 110px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/news-banner-bg.png) repeat-x left 35% / 100%;
+    background: url(../images/news-banner-bg.png) repeat-x left 35% / 100%;
 }
-.posts-outer .top-post .left{
+.posts-outer .top-post .left {
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.6);
 }
-.posts-outer .top-post h1{
+.posts-outer .top-post h1 {
     max-width: 360px;
 }
-.posts-outer h1{
+.posts-outer h1 {
     padding-bottom: 15px;
     font-size: 33px;
 }
-.posts-outer h1 a{
+.posts-outer h1 a {
     color: #0c525e;
 }
-.posts-outer .source{
+.posts-outer .source {
     margin-bottom: 75px;
     font-size: 20px;
     color: #232323;
     line-height: 28px;
 }
-.posts-outer .source span{
+.posts-outer .source span {
     display: block;
 }
-.posts-outer p, .single-page p{
+.posts-outer p, .single-page p {
     font-size: 20px;
     color: #000;
     line-height: 26px;
 }
-.posts-outer ul.follow-us{
+.posts-outer ul.follow-us {
     display: inline-block;
     padding-top: 10px;
     margin-top: 16px;
     border-top: 2px solid #0c525e;
 }
-.posts-outer ul.follow-us li a{
+.posts-outer ul.follow-us li a {
     font-size: 26px;
     color: #0c525e;
 }
-.posts-outer ul.follow-us li a:hover{
+.posts-outer ul.follow-us li a:hover {
     color: #0e9dbc;
 }
-.posts-outer ul.follow-us li:first-child{
+.posts-outer ul.follow-us li:first-child {
     padding-left: 0px;
 }
-.posts-outer ul.follow-us li:last-child{
+.posts-outer ul.follow-us li:last-child {
     padding-right: 0px;
 }
-ul.post-lists > li{
+ul.post-lists > li {
     margin-bottom: 100px;
 }
-ul.post-lists > li:last-child{
+ul.post-lists > li:last-child {
     margin-bottom: 0px;
 }
-ul.post-lists > li figure img{
+ul.post-lists > li figure img {
     width: 100%;
 }
-ul.post-lists > li h1{
+ul.post-lists > li h1 {
     padding-bottom: 25px;
 }
-ul.post-lists > li .date{
+ul.post-lists > li .date {
     display: block;
     padding-bottom: 30px;
     font-size: 20px;
     color: #232323;
 }
-ul.post-lists > li p{
+ul.post-lists > li p {
     padding-bottom: 30px;
 }
-ul.post-lists > li .source{
+ul.post-lists > li .source {
     margin-bottom: 30px;
 }
 
 /* ================================================== */
 /* News Single Page */ 
 /* ================================================== */
-.news-single .top-post{
+.news-single .top-post {
     margin-bottom: 0px !important;
     background-position: left 28%;
 }
 .news-single.posts-outer .top-post h1 {
     max-width: 100%;
 }
-.news-single.posts-outer .source{
+.news-single.posts-outer .source {
     margin-bottom: 35px;
 }
-.news-single figure{
+.news-single figure {
     margin-bottom: 25px;
 }
-.news-single p{
+.news-single p {
     margin-bottom: 20px;
 }
-.news-single .pager{
+.news-single .pager {
     margin-top: 80px;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
 }
-.news-single .pager a{
+.news-single .pager a {
     font-family: 'Anton', sans-serif;
     font-size: 22px;
     color: #0c525e;
     transition: all 0.3s;
 }
-.news-single .pager a:hover{
+.news-single .pager a:hover {
     color: #0e9dbc;
 }
-.news-single .pager a.next{
+.news-single .pager a.next {
     margin-left: auto;
 }
 
 /* ================================================== */
 /* Contact Page */ 
 /* ================================================== */
-.contact-outer{
+.contact-outer {
     margin-top: 30px;
-    background: url(https://soraytec.com/wp-content/themes/soraytec/images/news-banner-bg.png) repeat-x left 6% / 100%;
+    background: url(../images/news-banner-bg.png) repeat-x left 6% / 100%;
 }
 .about-outer h1,
-.contact-outer h1{
+.contact-outer h1 {
     padding-bottom: 160px;
     font-size: 56px;
     color: #0c525e;
     text-transform: uppercase;
 }
-.contact-outer .address-outer{
+.contact-outer .address-outer {
     padding: 20px 15px;
     margin-left: -15px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.6);
 }
-.contact-outer .address h2{
+.contact-outer .address h2 {
     margin-bottom: 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: 300;
     color: #1aa1c0;
 }
-.contact-outer .address address{
+.contact-outer .address address {
     font-size: 20px;
     color: #000;
     line-height: 28px;
 }
-.contact-outer .mail{
+.contact-outer .mail {
     display: block;
     margin-top: 20px;
 }
-.contact-outer .mail a{
+.contact-outer .mail a {
     display: inline-block;
     color: #007ae1;
     position: relative;
     transition: all 0.3s;
 }
-.contact-outer .mail a:after{
+.contact-outer .mail a:after {
     width: 100%;
     height: 1px;
     display: block;
@@ -1161,22 +1160,22 @@ ul.post-lists > li .source{
     bottom: 0px;
     background: #007ae1;
 }
-.contact-outer .mail a:hover{
+.contact-outer .mail a:hover {
     color: #1aa1c0;
 }
-.contact-outer .mail a:hover:after{
+.contact-outer .mail a:hover:after {
     background: #1aa1c0;
 }
-.contact-form{
+.contact-form {
     padding: 30px;
     background: #fff;
     border: 2px #0c525e solid;
     border-radius: 20px;
 }
-.contact-form .form-group{
+.contact-form .form-group {
     margin-bottom: 30px;
 }
-.contact-form .form-control{
+.contact-form .form-control {
     height: 46px;
     padding: 15px 20px;
     font-size: 20px;
@@ -1185,14 +1184,14 @@ ul.post-lists > li .source{
     border: 1px #686868 solid;
     border-radius: 0px;
 }
-.contact-form textarea.form-control{
+.contact-form textarea.form-control {
     height: 90px;
     line-height: 28px;
     padding-top: 10px;
     padding-bottom: 10px;
     resize: none;
 }
-.contact-form .send-btn{
+.contact-form .send-btn {
     margin-left: auto;
     background: none;
     border: none;
@@ -1203,29 +1202,29 @@ ul.post-lists > li .source{
     text-transform: uppercase;
     transition: all 0.3s;
 }
-.contact-form .send-btn:hover{
+.contact-form .send-btn:hover {
     color: #f7941d;
 }
 
 /* ================================================== */
 /* Privacy policy */ 
 /* ================================================== */
-.single-page .about-banner{
+.single-page .about-banner {
     min-height: 252px;
 }
-.single-page h2{
+.single-page h2 {
     padding-bottom: 10px;
     font-size: 33px;
     color: #0c525e;
 }
-.single-page h3{
+.single-page h3 {
     font-family: 'Roboto', sans-serif;
     padding-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
     color: #000;
 }
-.single-page p{
+.single-page p {
     margin-bottom: 15px;
 }
 
@@ -1234,8 +1233,7 @@ ul.post-lists > li .source{
 /* ================================================== */
 
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199px){
-    
+@media (max-width: 1199px) {
     .banner {
         height: 425px;
     }
@@ -1257,22 +1255,22 @@ ul.post-lists > li .source{
         font-size: 28px;
         line-height: 34px;
     }
-    .about-sec .vision{
+    .about-sec .vision {
         background-size: 20%;
     }
     .about-sec .vision .inner {
         max-width: 460px;
     }
-    .about-sec .mission{
+    .about-sec .mission {
         background-size: 11%;
     }
-    .about-sec .values{
+    .about-sec .values {
         background-size: 4%;
     }
     .inner-outer {
         padding-bottom: 60px;
     }
-    .about-outer{
+    .about-outer {
         padding-bottom: 10px;
     }
     .about-outer h1, .contact-outer h1 {
@@ -1281,7 +1279,7 @@ ul.post-lists > li .source{
     .about-banner .about-desc p {
         font-size: 18px;
     }
-    .history{
+    .history {
         padding-bottom: 200px;
     }
     ul.history-cnt .left h2 {
@@ -1351,7 +1349,7 @@ ul.post-lists > li .source{
     .signup-sec {
         padding: 30px 0 60px 0;
     }
-   .prdct-banner.banner {
+    .prdct-banner.banner {
         height: 610px;
         padding: 160px 0px 39px;
     }
@@ -1360,14 +1358,14 @@ ul.post-lists > li .source{
         bottom: 18%;
         line-height: 34px;
     }
-    .prdct-banner .right{
+    .prdct-banner .right {
         text-align: right;
     }
-    .prdct-banner .right figure{
+    .prdct-banner .right figure {
         max-width: 500px;
         display: inline-block;
     }
-    .about-sec.prdct-feature .prdct-feature-header h2{
+    .about-sec.prdct-feature .prdct-feature-header h2 {
         padding-top: 0px;
         margin-bottom: 15px;
         font-size: 60px;
@@ -1388,7 +1386,7 @@ ul.post-lists > li .source{
     .application {
         padding-top: 80px;
     }
-    .application .left h2{
+    .application .left h2 {
         margin-bottom: 20px;
     }
     .application .left ul li {
@@ -1411,7 +1409,7 @@ ul.post-lists > li .source{
         font-size: 16px;
         margin-top: 0px;
     }
-    .features-wrapper{
+    .features-wrapper {
         padding-top: 200px;
     }
     .features-wrapper .left h2 {
@@ -1440,13 +1438,13 @@ ul.post-lists > li .source{
         margin-bottom: 60px;
         background-position: left 62%;
     }
-    .news-single .top-post{
+    .news-single .top-post {
         background-position: left 24%;
     }
     .news-single.posts-outer .source {
         margin-bottom: 25px;
     }
-    .posts-outer .top-post figure{
+    .posts-outer .top-post figure {
         margin-bottom: 30px;
     }
     .posts-outer .source {
@@ -1457,1042 +1455,5 @@ ul.post-lists > li .source{
     .posts-outer h1 {
         padding-bottom: 15px;
         font-size: 30px;
-    }
-    .posts-outer p, .single-page p{
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .posts-outer ul.follow-us{
-        margin-top: 10px;
-    }
-    .posts-outer ul.follow-us li a {
-        font-size: 24px;
-    }
-    ul.follow-us li {
-        padding: 0 10px;
-    }
-    ul.post-lists > li {
-        margin-bottom: 60px;
-    }
-    ul.post-lists > li h1 {
-        padding-bottom: 20px;
-    }
-    ul.post-lists > li .date {
-        padding-bottom: 20px;
-        font-size: 18px;
-    }
-    ul.post-lists > li p {
-        padding-bottom: 0px;
-    }
-    .about-banner{
-        background-position: -100px 21%;
-    }
-    .contact-outer {
-        margin-top: 30px;
-        background-position: left 16%;
-    }
-    .contact-outer .address h2 {
-        margin-bottom: 10px;
-        font-size: 32px;
-    }
-    .contact-outer .address address {
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .contact-outer .mail {
-        margin-top: 15px;
-    }
-    .contact-form {
-        padding: 20px;
-    }
-    .contact-form .form-group {
-        margin-bottom: 25px;
-    }
-    .contact-form .form-control {
-        height: 44px;
-        padding: 10px 15px;
-        font-size: 18px;
-    }
-    .contact-form .send-btn {
-        font-size: 36px;
-        line-height: 36px;
-    }
-    .single-page .about-banner {
-        min-height: 150px;
-    }
-    .single-page h2 {
-        font-size: 28px;
-    }
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991px) {
-    
-    .navbar-light .navbar-nav .nav-link {
-        padding-right: 15px;
-        padding-left: 15px;
-        font-size: 18px;
-    }
-    .banner {
-        height: 400px;
-        padding: 80px 0 0;
-    }
-    .banner h1 {
-        padding: 0px 0 10px 0;
-        font-size: 36px;
-    }
-    .banner p {
-        font-size: 19px;
-        line-height: 26px;
-    }
-    .about-sec:after {
-        height: 39px;
-        background-size: 22%;
-    }
-    .about-sec h2 {
-        padding: 30px 0 10px 0;
-    }
-    .about-sec p {
-        font-size: 22px;
-        line-height: 32px;
-    }
-    .about-sec .vision {
-        background-position: left 95%;
-        background-size: 20%;
-    }
-    .about-sec .mission {
-        background-position: left 95%;
-        background-size: 12%;
-    }
-    .about-sec .values {
-        background-position: left 95%;
-        background-size: 5%;
-    }
-    .soraytec-ecosystem h2 {
-        font-size: 36px;
-    }
-    ul.logos-list li {
-        margin: 15px 0;
-    }
-    ul.logos-list li a{
-        padding: 0 10px;
-    }
-    .footer{
-        padding: 90px 0 50px 0;
-        background-size: 22%;
-    }
-    .footer .top {
-        margin-bottom: 30px;
-    }
-    .footer a.foot-logo {
-        max-width: 200px;
-    }
-    .footer h4 {
-        padding-bottom: 20px;
-        font-size: 24px;
-    }
-    .footer .contact a.mail {
-        margin-top: 20px;
-        font-size: 16px;
-    }
-    ul.follow-us li {
-        padding: 0 10px;
-    }
-    ul.follow-us li a {
-        font-size: 28px;
-    }
-    .footer a.privacy,
-    .copyright{
-        font-size: 16px;
-    }
-    .about-outer {
-        margin-top: 10px;
-    }
-    .about-outer h1,
-    .contact-outer h1 {
-        font-size: 50px;
-    }
-    .about-banner{
-        background-position: center 60%;
-    }
-    .about-banner .about-desc {
-        padding: 20px 30px;
-    }
-    .about-banner .about-desc p {
-        font-size: 17px;
-        line-height: 24px;
-    }
-    .about-outer .history h1 {
-        padding-bottom: 20px;
-    }
-    ul.timeline {
-        margin: 50px 0 0 -45px;
-        padding-bottom: 160px;
-    }
-    ul.timeline > li .timeline-cnt {
-        font-size: 15px;
-    }
-    .history {
-        padding: 25px 0 70px 0;
-    }
-    ul.history-cnt .left h2 {
-        font-size: 24px;
-    }
-    ul.history-cnt .left p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    ul.history-cnt .right {
-        min-height: 224px;
-    }
-    .the-team .team-desc {
-        padding: 20px 30px;
-    }
-    .the-team .team-desc p {
-        font-size: 17px;
-        line-height: 26px;
-    }
-    ul.team-list li {
-        margin-bottom: 30px;
-    }
-    .about-outer .video-sec h1 {
-        padding-bottom: 20px;
-    }
-    .youtube-video {
-        padding-bottom: 83.25%;
-    }
-    .signup-sec {
-        padding: 20px 0 40px 0;
-    }
-    .signup-sec h2 {
-        font-size: 20px;
-    }
-    .signup-form .form-group {
-        width: 280px;
-    }
-    .signup-form .form-control {
-        height: 36px;
-        line-height: 36px;
-        font-size: 14px;
-    }
-    .signup-form .btn-signup {
-        font-size: 32px;
-    }
-    .prdct-banner.banner {
-        height: 478px;
-        padding: 150px 0px 38px;
-    }
-    .prdct-banner .left p {
-        font-size: 21px;
-        bottom: 19%;
-        left: 35px;
-        line-height: 26px;
-    }
-    .prdct-banner .right figure {
-        max-width: 400px;
-    }
-    .prdct-feature-header h2{
-        margin-bottom: 18px;
-    }
-    .about-sec.prdct-feature .prdct-feature-header h2 {
-        margin-bottom: 5px;
-        font-size: 56px;
-    }
-    .prdct-feature-cnt li {
-        margin-top: 30px;
-    }
-    .prdct-feature-cnt li p {
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .prdct-feature-bottom {
-        margin-top: 20px;
-        padding: 45px 0px 20px 0px;
-    }
-    .application {
-        padding-top: 60px;
-    }
-    .application .left h2 {
-        font-size: 44px;
-        margin-bottom: 25px;
-    }
-    .application .left ul li {
-        font-size: 22px;
-        margin-top: 14px;
-        line-height: 30px;
-    }
-    .application .right {
-        padding-bottom: 30px;
-    }
-    .application-cnt {
-        margin-top: 15px;
-    }
-    .application-cnt h3 {
-        font-size: 26px;
-    }
-    .application-cnt .left-table h4 {
-        font-size: 15px;
-        line-height: 22px;
-    }
-    .application-cnt .right-table span {
-        font-size: 14px;
-    }
-    .features-wrapper .left h2 {
-        padding-bottom: 15px;
-        font-size: 44px;
-    }
-    .features-wrapper .left ul li {
-        font-size: 20px;
-        padding-left: 26px;
-        line-height: 30px;
-    }
-    .contact-wrapper {
-        padding: 80px 0px 60px 0px;
-    }
-    .contact-wrapper .left p {
-        font-size: 26px;
-        line-height: 36px;
-    }
-    .contact-wrapper .right h2 {
-        margin-bottom: 5px;
-        font-size: 56px;
-    }
-    .contact-wrapper .right a {
-        font-size: 28px;
-    }
-    .prdct-feature-cnt figure img {
-        max-width: 98px;
-    }
-    .posts-outer {
-        margin-top: 0px;
-    }
-    .posts-outer h1 {
-        font-size: 28px;
-    }
-    .posts-outer .top-post {
-        background-position: left 46%;
-    }
-    .posts-outer .top-post h1 {
-        max-width: inherit;
-    }
-    ul.post-lists > li {
-        margin-bottom: 40px;
-    }
-    .news-single .top-post{
-        background-position: left 24%;
-    }
-    .news-single .pager {
-        margin-top: 60px;
-    }
-    .contact-outer .address h2 {
-        font-size: 28px;
-    }
-    .contact-outer .address address {
-        font-size: 17px;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .video-sec .video-outer .thumbnail ul.slides{
-        width: 100% !important;
-    }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767px) {
-    
-    .navbar-brand {
-        max-width: 210px;
-    }
-    .navbar-light .navbar-nav .nav-link {
-        padding-right: 0px;
-        padding-left: 0px;
-        font-size: 16px;
-    }
-    .header .navbar-toggler {
-        width: 30px;
-        height: 21px;
-        padding: 0;
-        position: absolute;
-        right: 15px;
-        top: 56px;
-        z-index: 10;
-        border: none;
-    }
-    .header .navbar-toggler .navbar-toggler-icon {
-        width: 100%;
-        height: 2px;
-        margin: auto;
-        display: block;
-    }
-    .header .navbar-toggler .navbar-toggler-icon:before,
-    .header .navbar-toggler .navbar-toggler-icon:after {
-        background: #0e9dbc;
-        width: 100%;
-        height: 2px;
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        transition: 0.3s all;
-        transform-origin: 50%;
-    }
-    .header .navbar-toggler .navbar-toggler-icon:before {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-    .header .navbar-toggler .navbar-toggler-icon:after {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    .header .navbar-toggler.collapsed .navbar-toggler-icon:before,
-    .header .navbar-toggler.collapsed .navbar-toggler-icon:after {
-        -webkit-transform: rotate(0);
-        -moz-transform: rotate(0);
-        -ms-transform: rotate(0);
-        transform: rotate(0);
-    }
-    .header .navbar-toggler.collapsed .navbar-toggler-icon:before {
-        top: 0;
-    }
-    .header .navbar-toggler.collapsed .navbar-toggler-icon:after {
-        bottom: 0;
-    }
-    .header .navbar-toggler.collapsed .navbar-toggler-icon {
-        background: #0e9dbc;
-    }
-    .banner {
-        height: auto;
-        padding: 20px 0;
-    }
-    .banner h1 {
-        padding: 0px 0 10px 0;
-        font-size: 40px;
-    }
-    .banner p{
-        margin-bottom: 30px;
-        font-size: 20px;
-        line-height: 28px;
-    }
-    .banner .right figure {
-        max-width: 400px;
-    }
-    .about-sec{
-        padding: 60px 0 40px 0;
-        text-align: center;
-    }
-    .about-sec h2 {
-        padding: 0 0 10px 0;
-        font-size: 46px;
-    }
-    .about-sec .vision .inner {
-        max-width: inherit;
-        padding: 0 0 20px 0;
-    }
-    .about-sec .mission .inner {
-        max-width: inherit;
-        text-align: center;
-        margin-left: inherit;
-    }
-    .about-sec .values{
-        margin-bottom: 40px;
-    }
-    .about-sec figure {
-        max-width: 375px;
-        margin: 0 auto;
-    }
-    .footer {
-        padding: 60px 0 40px 0;
-    }
-    .footer .contact{
-        margin-bottom: 30px;
-    }
-    .footer .contact a.mail {
-        margin-top: 0;
-    }
-    .copyright{
-        margin-top: 10px;
-    }
-    .about-banner h1 {
-        padding-top: 0px;
-    }
-    .about-banner .about-desc {
-        padding: 20px;
-    }
-    .about-banner .about-desc p {
-        font-size: 16px;
-    }
-    .about-outer .history h1 {
-        padding-bottom: 5px;
-    }
-    .about-outer .history .show-mob{
-        display: block;
-    }
-    .about-outer .history .show-mob p {
-        margin-bottom: 20px;
-        color: #000;
-    }
-    .history {
-        padding: 25px 0 40px 0;
-    }
-    ul.history-cnt,
-    ul.timeline > li .timeline-cnt ul:before,
-    ul.history-cnt .left .title:after{
-        display: none;
-    }
-    ul.timeline{
-        display: block;
-        padding: 0px;
-        margin: 0px;
-    }
-    ul.timeline > li{
-        max-width: inherit;
-        flex: 0 0 100%;
-        padding: 36px 0 0 0;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-    ul.timeline > li:before,
-    ul.timeline > li:after,
-    ul.timeline > li:last-child .inner:after{
-        display: none;
-    }
-    ul.timeline > li .timeline-cnt {
-        width: inherit !important;
-        left: 0px !important;
-        top: 0px !important;
-        position: relative;
-    }
-    ul.timeline > li .timeline-cnt ul {
-        padding: 0;
-    }
-    ul.timeline > li .timeline-cnt ul li:before {
-        width: 14px;
-        height: 14px;
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 6px 0 0;
-        background: #f79422;
-        border-radius: 50%;
-    }
-    ul.timeline > li .collapse-cnt{
-        display: none;
-        margin-top: 10px;
-        margin-bottom: 25px;
-    }
-    ul.timeline > li .collapse-cnt.active{
-        display: block;
-    }
-    ul.timeline > li .collapse-cnt .left{
-        margin-bottom: 15px;
-    }
-    ul.timeline > li .collapse-cnt p{
-        font-weight: 300;
-    }
-    ul.timeline > li .circle{
-        width: auto;
-        height: auto;
-        line-height: inherit;
-        position: absolute;
-        left: 0px;
-        top: 0;
-        background: none !important;
-        font-size: 28px;
-        color: #f79422;
-    }
-    ul.timeline > li:nth-child(2) .circle {
-        color: #e1a52e;
-    }
-    ul.timeline > li:nth-child(3) .circle {
-        color: #c9b335;
-    }
-    ul.timeline > li:nth-child(4) .circle {
-        color: #8cc347;
-    }
-    ul.timeline > li:nth-child(5) .circle {
-        color: #76b96a;
-    }
-    ul.timeline > li:nth-child(6) .circle {
-        color: #5bb089;
-    }
-    ul.timeline > li:nth-child(7) .circle {
-        color: #169fbc;
-    }
-    .the-team{
-        background: none;
-        padding-top: 30px;
-    }
-    .the-team .team-desc {
-        padding: 20px;
-        margin-top: 15px;
-    }
-    .the-team .team-desc p {
-        font-size: 16px;
-    }
-    ul.team-list {
-        margin-top: 30px;
-    }
-    ul.team-list li {
-        margin-bottom: 20px;
-    }
-    .video-sec .video-outer{
-        display: block;
-    }
-    .video-sec .video-outer .video{
-        width: 100%;
-    }
-    .video-sec .video-outer .thumbnail {
-        width: 100%;
-        padding: 40px 20px;
-    }
-    .video-sec .flex-direction-nav .flex-next{
-        top: 50%;
-        margin-top: -12px;
-        transform: rotate(90deg);
-        left: inherit !important;
-        right: 20px;
-    }
-    .video-sec .flex-direction-nav .flex-prev{
-        top: 50%;
-        margin-top: -12px;
-        transform: rotate(90deg);
-        left: 20px !important;
-    }
-    .video-sec .video-outer .thumbnail ul.slides li{
-        margin: 0 15px 0 0 !important;
-    }
-    .youtube-video{
-        padding-bottom: 56.25%;
-    }
-    .signup-sec .inner {
-        display: block;
-    }
-    .signup-sec h2 {
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-    .signup-form .form-group {
-        width: calc(100% - 90px);
-        margin-bottom: 0px;
-    }
-    .signup-form .btn-signup {
-        font-size: 26px;
-    }
-    .prdct-header {
-        position: inherit;
-    }
-    .prdct-banner.banner {
-        height: 100%;
-        padding: 30px 0px;
-        text-align: center;
-    }
-    .prdct-banner .left p {
-        bottom: inherit;
-        position: inherit;
-        left: inherit;
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .prdct-banner .right figure {
-        max-width: 100%;
-    }
-    .prdct-banner .right {
-        margin-top: 46px;
-    }
-    .about-sec.prdct-feature .prdct-feature-header h2 {
-        font-size: 48px;
-    }
-    .prdct-feature-bottom{
-        background: none;
-    }
-    .prdct-feature-bottom .right {
-        margin-top: 50px;
-    }
-    .application {
-        padding-top: 30px;
-    }
-    .application .left {
-        padding: 0px;
-        margin-bottom: 50px;
-    }
-    .application .left figure{
-        margin-top: 40px;
-        text-align: center;
-    }
-    .application .left ul li {
-        padding-left: 20px;
-        font-size: 20px;
-        margin-top: 10px;
-        line-height: 26px;
-    }
-    .application-cnt .right-table span {
-        font-size: 16px;
-    }
-    .features-wrapper .left h2{
-        padding-bottom: 15px;
-        text-align: left;
-    }
-    .features-wrapper .left ul li {
-        padding-left: 20px;
-        font-size: 18px;
-        text-align: left;
-        line-height: 28px;
-    }
-    .features-content .right {
-        margin-top: 30px;
-    }
-    .features-content:after {
-        height: 85px;
-        background-size: contain;
-    }
-    .features-content {
-        padding-bottom: 139px;
-    }
-    .contact-wrapper {
-        padding: 70px 0 50px 0;
-    }
-    .contact-wrapper .left {
-        margin-bottom: 20px;
-    }
-    .contact-wrapper .left p{
-        font-size: 22px;
-        line-height: 30px;
-        text-align: center;
-    }
-    .about-sec p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-    .about-sec.features-wrapper {
-        padding-top: 170px;
-    }
-    .prdct-feature-cnt li figure {
-        min-height: 79px;
-    }
-    .posts-outer .top-post {
-        margin-bottom: 40px;
-        background: none;
-    }
-    .posts-outer .top-post figure {
-        margin-bottom: 25px;
-    }
-    .posts-outer p, .single-page p{
-        margin-bottom: 15px;
-    }
-    .posts-outer ul.follow-us li a {
-        font-size: 22px;
-    }
-    ul.post-lists > li {
-        margin-bottom: 30px;
-    }
-    ul.post-lists > li figure{
-        margin-bottom: 20px;
-    }
-    ul.post-lists > li .date {
-        padding-bottom: 15px;
-    }
-    .news-single.posts-outer .source {
-        margin-bottom: 15px;
-    }
-    .news-single .pager {
-        margin-top: 40px;
-    }
-    .about-outer,
-    .contact-outer{
-        background: none;
-        margin-top: 0px;
-    }
-    .about-outer h1,
-    .contact-outer h1 {
-        padding-bottom: 20px;
-        font-size: 46px;
-    }
-    .contact-form .send-btn {
-        font-size: 32px;
-        line-height: 32px;
-    }
-    .single-page h2 {
-        font-size: 26px;
-        line-height: 34px;
-    }
-}
-
-/*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575px) {
-    
-    .header .navbar-toggler {
-        top: 41px;
-    }
-    .navbar-brand {
-        max-width: 160px;
-    }
-    .banner {
-        padding: 0 0 20px 0;
-        border-bottom: 12px solid #5b5b5b;
-    }
-    .banner h1 {
-        font-size: 38px;
-    }
-    .banner p {
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .banner .right figure {
-        max-width: 290px;
-    } 
-    .about-sec {
-        padding: 30px 0;
-    }
-    .about-sec h2 {
-        padding: 0 0 5px 0;
-        font-size: 40px;
-    }
-    .about-sec p {
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .about-sec .vision {
-        margin-bottom: 30px;
-    }
-    .soraytec-ecosystem {
-        padding: 40px 0 30px 0;
-    }
-    .soraytec-ecosystem h2 {
-        padding-bottom: 10px;
-        font-size: 34px;
-    }
-    .about-sec.prdct-feature .prdct-feature-header h2 {
-        font-size: 42px;
-    }
-    ul.logos-list li {
-        -ms-flex: 0 0 50%;
-        -webkit-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-    ul.logos-list li a{
-        max-width: 200px;
-        margin: 0 auto;
-    }
-    .footer {
-        padding: 40px 0 30px 0;
-    }
-    .footer .top {
-        margin-bottom: 20px;
-    }
-    .footer a.foot-logo {
-        max-width: 180px;
-    }
-    .footer h4 {
-        padding-bottom: 15px;
-        font-size: 22px;
-    }
-    .footer .contact {
-        margin-bottom: 20px;
-    }
-    .footer .contact a.mail,
-    .footer a.privacy, .copyright {
-        font-size: 15px;
-    }
-    ul.follow-us li a {
-        font-size: 24px;
-    }
-    .inner-outer {
-        padding-bottom: 30px;
-    }
-    ul.team-list li:last-child {
-        margin-bottom: 0px;
-    }
-    ul.team-list li .inner{
-        max-width: 260px;
-        margin: 0 auto;
-    }
-    .prdct-banner.banner{
-        padding: 0px;
-        border: none;
-    }
-    .prdct-banner .left p {
-        margin-bottom: 20px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .application-cnt .right-table span {
-        font-size: 14px;
-        word-break: break-word;
-    }
-    .application .container{
-        padding: 0px 30px;
-    }
-    .prdct-banner .right {
-        margin-top: 30px;
-    }
-    .prdct-feature-cnt li p {
-        margin-top: 22px;
-        font-size: 16px;
-    }
-    .prdct-feature-bottom {
-        margin-top: 0;
-    }
-    .prdct-feature-bottom .right {
-        margin-top: 60px;
-    }
-    .application .left {
-        margin-bottom: 30px;
-    }
-    .application .left h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    .application .left ul li {
-        padding-left: 16px;
-        font-size: 18px;
-        margin-top: 8px;
-        line-height: 26px;
-    }
-    .application-cnt .left-table h4 {
-        font-size: 13px;
-    }
-    .application .right {
-        padding-bottom: 60px;
-    }
-    .about-sec.features-wrapper {
-        padding-top: 0px;
-        margin-top: 30px;
-    }
-    .features-wrapper .left h2 {
-        font-size: 40px;
-    }
-    .features-wrapper .left ul li:before {
-        top: 4px;
-    }
-    .features-wrapper .right figure {
-        max-width: 100%;
-    }
-    .contact-wrapper {
-        padding: 50px 0px;
-    }
-    .features-content:after {
-        height: 78px;
-    }
-    .contact-wrapper .left {
-        margin-bottom: 15px;
-    }
-    .contact-wrapper .left p {
-        font-size: 18px;
-    }
-    .contact-wrapper .right h2 {
-        font-size: 50px;
-    }
-    .contact-wrapper .right a {
-        font-size: 22px;
-    }
-    .prdct-feature-bottom figure,.prdct-banner figure{ 
-        max-width: 100% !important;
-    }
-    .prdct-feature-cnt li figure {
-        min-height: auto;
-    }
-    .posts-outer .top-post {
-        margin-bottom: 20px;
-    }
-    .posts-outer h1 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-    .posts-outer .source {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    .posts-outer p, .single-page p{
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    ul.post-lists > li .date {
-        font-size: 16px;
-    }
-    .news-single .pager a {
-        font-size: 18px;
-    }
-    .about-outer h1,
-    .contact-outer h1 {
-        padding-bottom: 15px;
-        font-size: 40px;
-    }
-    .contact-outer .address {
-        padding-bottom: 15px;
-    }
-    .contact-outer .address h2 {
-        margin-bottom: 5px;
-        font-size: 26px;
-    }
-    .contact-form {
-        padding: 30px 20px;
-        margin-top: 10px;
-    }
-    .contact-form .form-group {
-        margin-bottom: 20px;
-    }
-    .contact-form .form-control {
-        height: 38px;
-        font-size: 16px;
-    }
-    .contact-form .send-btn {
-        font-size: 26px;
-        line-height: 26px;
-    }
-}
-
-/* Landscape iPhone 6 Plus */
-@media (max-width: 414px) {
-    
-    .banner h1 {
-        font-size: 32px;
-    }
-    .about-sec figure {
-        max-width: 300px;
-    }
-}
-
-/* Landscape iPhone 6 */
-@media (max-width: 375px) {
-
-    .about-sec figure {
-        max-width: 220px;
-    }
-    .video-sec .flex-direction-nav a {
-        width: 18px;
-        height: 30px;
-    }
-    .signup-sec {
-        padding: 0 0 30px 0;
-    }
-    ul.logos-list li {
-        -ms-flex: 0 0 100%;
-        -webkit-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-/* Landscape iPhone 5 */
-@media (max-width: 320px) {
-    
-    .soraytec-ecosystem h2 {
-        font-size: 32px;
-    }
-    .about-sec.prdct-feature .prdct-feature-header h2 {
-        font-size: 36px;
-    }
-    .contact-wrapper .right h2 {
-        font-size: 44px;
     }
 }
