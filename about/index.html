@@ -19,7 +19,135 @@
 <style>
     img { max-width: 100%; height: auto; }
     .youtube-video iframe { max-width: 100%; }
-  </style>
+  
+
+    /* Keep every History image in the same visual frame without distortion. */
+    #hslider .history-cnt > li .right figure {
+      width: 100%;
+      height: 360px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #hslider .history-cnt > li .right figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    .collapse-cnt figure {
+      width: 100%;
+      height: 220px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .collapse-cnt figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* Video: main player + a thumbnail rail that uses the full player height. */
+    .video-outer {
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+    }
+    #slider.video {
+      flex: 1 1 auto;
+      min-width: 0;
+      margin-bottom: 0;
+    }
+    #slider .youtube-video,
+    #slider .youtube-video iframe {
+      width: 100%;
+      height: 360px;
+    }
+    #carousel.video-thumb-rail {
+      flex: 0 0 200px;
+      height: 360px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: transparent;
+      border: 0;
+    }
+    #carousel .thumb-viewport {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+    #carousel ul.slides {
+      display: block !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+      transform: none !important;
+    }
+    #carousel ul.slides > li {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+      height: 120px;
+      margin: 0 0 12px 0 !important;
+      cursor: pointer;
+      overflow: hidden;
+      box-sizing: border-box;
+      opacity: .72;
+      transition: opacity .15s ease, box-shadow .15s ease;
+    }
+    #carousel ul.slides > li:last-child { margin-bottom: 0 !important; }
+    #carousel ul.slides > li.active-thumb { opacity: 1; }
+    #carousel ul.slides > li img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+    #carousel .thumb-nav {
+      flex: 0 0 32px;
+      width: 100%;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      line-height: 32px;
+      cursor: pointer;
+      opacity: 1;
+      visibility: visible;
+    }
+    #carousel .thumb-nav:disabled {
+      cursor: default;
+      opacity: .28;
+    }
+
+    @media (max-width: 767px) {
+      #hslider .history-cnt > li .right figure { height: 240px; }
+      .collapse-cnt figure { height: 200px; }
+      .video-outer { display: block; }
+      #slider .youtube-video,
+      #slider .youtube-video iframe { height: 56.25vw; max-height: 360px; min-height: 210px; }
+      #carousel.video-thumb-rail {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        flex-basis: auto;
+      }
+      #carousel .thumb-viewport { max-height: 264px; }
+      #carousel ul.slides > li { height: 120px; }
+    }
+</style>
 <!-- Google Analytics retained from the existing page -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-146682264-1"></script>
 <script>
@@ -719,26 +847,7 @@
 </div>
 </div>
 </li>
-<li class="col-sm-6 col-md-4 col-lg-3">
-<div class="inner">
-<div class="flipper">
-<div class="front">
-<img alt="Christian Aas" src="https://soraytec.com/wp-content/uploads/2019/07/team-img1.jpg"/>
-</div>
-<div class="back">
-<p>MSc. Mechanical Engineering / Industrial Economics</p>
-<p>20+ years executive experience in leading roles establishing and developing companies globally, specialized on strategic alliances</p>
-<div class="d-flex mt-auto">
-<a href="https://www.linkedin.com/in/christian-aas-8551461/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-</div>
-<div class="source">
-<div class="name">Christian Aas</div>
-<span>Executive Chairman</span>
-</div>
-</div>
-</li>
+
 <li class="col-sm-6 col-md-4 col-lg-3">
 <div class="inner">
 <div class="flipper">
@@ -822,12 +931,10 @@
 </li>
 </ul>
 </div>
-<div class="flexslider thumbnail" id="carousel">
-<ul class="slides">
-<li><img alt="" class="img-fluid" src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png"/></li>
-<li><img alt="" class="img-fluid" src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg"/></li>
-</ul>
-</div>
+<div class="thumbnail video-thumb-rail" id="carousel"><button aria-label="Previous video thumbnail" class="thumb-nav thumb-prev" type="button">▲</button><div class="thumb-viewport"><ul class="slides">
+<li><img alt="Soraytec company presentation thumbnail 1" class="img-fluid" src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg"/></li>
+<li><img alt="Soraytec company presentation thumbnail 2" class="img-fluid" src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png"/></li>
+</ul></div><button aria-label="Next video thumbnail" class="thumb-nav thumb-next" type="button">▼</button></div>
 </div>
 </div>
 </section>
@@ -970,27 +1077,50 @@
               );
             }
           });
+        },
+        after: function (slider) {
+          setActiveThumb(slider.currentSlide);
         }
       });
 
-      $('#carousel').flexslider({
-        animation: 'slide',
-        direction: 'vertical',
-        controlNav: false,
-        directionNav: true,
-        animationLoop: false,
-        slideshow: false,
-        itemHeight: 120,
-        itemMargin: 15,
-        asNavFor: '#slider'
-      });
+      // Thumbnail rail: show everything that fits; scroll only when there is overflow.
+      var $thumbViewport = $('#carousel .thumb-viewport');
+      var $thumbItems = $('#carousel .slides > li');
+      var $thumbPrev = $('#carousel .thumb-prev');
+      var $thumbNext = $('#carousel .thumb-next');
 
-      $('#carousel').on('click', '.slides > li', function (event) {
+      function updateThumbNav() {
+        if (!$thumbViewport.length) return;
+        var el = $thumbViewport.get(0);
+        var maxScroll = Math.max(0, el.scrollHeight - el.clientHeight);
+        $thumbPrev.prop('disabled', el.scrollTop <= 1);
+        $thumbNext.prop('disabled', el.scrollTop >= maxScroll - 1);
+      }
+
+      function setActiveThumb(index) {
+        $thumbItems.removeClass('active-thumb').eq(index).addClass('active-thumb');
+      }
+
+      setActiveThumb(0);
+      updateThumbNav();
+      $(window).on('resize', updateThumbNav);
+      $thumbViewport.on('scroll', updateThumbNav);
+
+      $thumbItems.on('click', function (event) {
         event.preventDefault();
         var targetIndex = $(this).index();
         $('#slider').flexslider(targetIndex);
-        $('#carousel').flexslider(targetIndex);
+        setActiveThumb(targetIndex);
       });
+
+      function scrollThumbRail(direction) {
+        if (!$thumbViewport.length || !$thumbItems.length) return;
+        var step = $thumbItems.first().outerHeight(true) || 132;
+        $thumbViewport.get(0).scrollBy({ top: direction * step, behavior: 'smooth' });
+      }
+
+      $thumbPrev.on('click', function () { scrollThumbRail(-1); });
+      $thumbNext.on('click', function () { scrollThumbRail(1); });
     }
   });
 })(jQuery);
