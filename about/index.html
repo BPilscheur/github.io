@@ -78,8 +78,57 @@
 	<link rel="stylesheet" id="newsletter-css" href="https://soraytec.com/wp-content/plugins/newsletter/style.css?ver=9.2.6" media="all">
 	<link rel="stylesheet" id="wp-block-paragraph-css" href="https://soraytec.com/wp-includes/blocks/paragraph/style.min.css?ver=7.0" media="all">
 
-	<!-- Native 16:9 Aspect Ratio & Responsive Heights Fixes -->
+	<!-- Native 16:9 Aspect Ratio, Timeline Restorations, and Team Card Styles -->
 	<style>
+		/* Timeline Structural Fixes */
+		#content-6 {
+			width: 100%;
+			overflow-x: auto;
+			padding-bottom: 20px;
+		}
+		
+		#content-6 .timeline {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			min-width: max-content;
+		}
+
+		#content-6 .timeline > li {
+			flex: 0 0 auto;
+			padding-right: 30px;
+		}
+
+		#content-6 .timeline .slide-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Team Member Cards Styling */
+		.team-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.team-list .inner {
+			position: relative;
+			perspective: 1000px;
+			margin-bottom: 30px;
+		}
+
+		.team-list .front img {
+			width: 100%;
+			height: auto;
+			border-radius: 4px;
+			display: block;
+		}
+
+		/* Video Display and Thumbnail Alignment */
 		.video-outer {
 			position: relative;
 			display: flex;
@@ -101,7 +150,7 @@
 			position: relative;
 			width: 100%;
 			height: 100%;
-			padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+			padding-bottom: 56.25%;
 			overflow: hidden;
 		}
 
@@ -297,7 +346,7 @@
         </div>
     </div>
 
-    <!-- Complete Uncut History Section -->
+    <!-- Restored History Section -->
     <section class="history" id="history-sec">
         <div class="container">
             <h1>HISTORY</h1>
@@ -475,7 +524,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2016</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -491,7 +540,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2017</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -507,7 +556,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2018</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -523,7 +572,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2019</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -539,7 +588,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2020</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -555,7 +604,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2021</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -571,7 +620,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2023</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -587,7 +636,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner" id="inner-content">
+                        <div class="inner">
                             <div class="circle">2024</div>
                             <div class="timeline-cnt">
                                 <ul class="slide-list">
@@ -607,7 +656,7 @@
         </div>
     </section>
 
-    <!-- Complete Uncut Team Section -->
+    <!-- Restored Complete Team Section -->
     <section class="the-team">
         <div class="container">
             <div class="row">
@@ -702,7 +751,7 @@
         </div>
     </section>
 
-    <!-- Corrected Aspect Ratio Video Section -->
+    <!-- Correct Aspect Ratio Video Section -->
     <section class="video-sec">
         <div class="container">
             <h1>Soraytec Company Presentation</h1>
