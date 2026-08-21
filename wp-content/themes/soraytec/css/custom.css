@@ -626,9 +626,7 @@ ul.team-list li .source .name {
 ul.team-list li .source span {
     display: block;
     font-size: 18px;
-}
-
-/* ================================================== */
+}/* ================================================== */
 /* Video Section & Click-Blocker Fixes                */
 /* ================================================== */
 .about-outer .video-sec {
@@ -642,6 +640,7 @@ ul.team-list li .source span {
 
 .video-sec .video-outer {
     display: flex;
+    align-items: flex-start;
 }
 
 .video-sec .video-outer .video {
@@ -650,9 +649,12 @@ ul.team-list li .source span {
     margin: 0 10px 0 0;
 }
 
+/* Fixed container height + relative positioning for vertical slider arrows */
 .video-sec .video-outer .thumbnail {
     width: 233px;
-    padding: 63px 20px;
+    height: 400px; /* Required: gives FlexSlider a container height to calculate slides */
+    position: relative;
+    padding: 40px 10px; /* Reduced top/bottom padding to give arrows space */
     margin: 0;
     background: #e4dfdf;
     border: none;
@@ -660,19 +662,25 @@ ul.team-list li .source span {
     overflow: hidden;
 }
 
-/* Make thumbnails responsive and clickable */
+/* Force vertical block list layout */
+.video-sec .video-outer .thumbnail ul.slides {
+    display: block !important;
+}
+
 .video-sec .video-outer .thumbnail ul.slides li {
-    margin-bottom: 20px;
+    width: 100% !important;
+    margin-bottom: 15px !important;
     cursor: pointer !important;
     position: relative;
     z-index: 100;
+    display: block !important;
 }
 
 .video-sec .video-outer .thumbnail ul.slides li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
-/* Allow click/touch interaction on active iframe slide */
+/* Interactive iframe controls */
 #slider .slides li {
     pointer-events: none;
 }
@@ -699,29 +707,35 @@ ul.team-list li .source span {
     width: 100%;
 }
 
-.video-sec .flex-direction-nav a {
+/* Navigation Arrows (Fixed Position & Inverted Arrow Logic) */
+.video-sec .thumbnail .flex-direction-nav a {
     width: 37px;
     height: 23px;
     font-size: 0;
     margin: 0;
     left: 50% !important;
     transform: translateX(-50%);
-    opacity: 1;
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 110;
 }
 
-.video-sec .flex-direction-nav .flex-next {
-    top: 20px;
-    background: url(../images/up-arrow.png) no-repeat center top / 100%;
+/* Previous = UP arrow at TOP of container */
+.video-sec .thumbnail .flex-direction-nav .flex-prev {
+    top: 10px !important;
+    bottom: auto !important;
+    background: url(../images/up-arrow.png) no-repeat center center / contain !important;
 }
 
-.video-sec .flex-direction-nav .flex-prev {
-    top: auto;
-    bottom: 20px;
-    background: url(../images/down-arrow.png) no-repeat center top / 100%;
+/* Next = DOWN arrow at BOTTOM of container */
+.video-sec .thumbnail .flex-direction-nav .flex-next {
+    top: auto !important;
+    bottom: 10px !important;
+    background: url(../images/down-arrow.png) no-repeat center center / contain !important;
 }
 
-.video-sec .flex-direction-nav a.flex-prev:before,
-.video-sec .flex-direction-nav a.flex-next:before {
+.video-sec .thumbnail .flex-direction-nav a.flex-prev:before,
+.video-sec .thumbnail .flex-direction-nav a.flex-next:before {
     display: none;
 }
 
