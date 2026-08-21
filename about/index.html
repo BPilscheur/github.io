@@ -1018,37 +1018,42 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 <!-- 3. FlexSlider & YouTube Click Handler Initialization -->
     <script>
-$(document.body).ready(function() {
-  
-  // Initialize Thumbnail Carousel vertically
-  $('#carousel').flexslider({
-    animation: "slide",
-    direction: "vertical", // <-- Change to vertical
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemMargin: 15,        // <-- Vertical margin between items
-    asNavFor: '#slider'
-  });
+$(document).ready(function() {
 
-  // Initialize Main Video Slider
+  // 1. Initialize Main Video Slider FIRST
   $('#slider').flexslider({
     animation: "slide",
     controlNav: false,
+    directionNav: false,
     animationLoop: false,
     slideshow: false,
-    sync: "#carousel",
     before: function(slider) {
+      // Pause YouTube videos on slide switch
       $('.youtube-video iframe').each(function() {
         this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
       });
     }
   });
 
-  // Ensure direct click events fire cleanly on thumbnail items
-  $('#carousel .slides').on('click', 'li', function(e) {
-    var index = $(this).index();
-    $('#slider').flexslider(index);
+  // 2. Initialize Thumbnail Carousel SECOND
+  $('#carousel').flexslider({
+    animation: "slide",
+    direction: "vertical",
+    controlNav: false,
+    directionNav: true, // Enables Up/Down arrows
+    animationLoop: false,
+    slideshow: false,
+    itemHeight: 120,    // Defines exact thumbnail item height for vertical math
+    itemMargin: 15,
+    asNavFor: '#slider'
+  });
+
+  // 3. Fix 1-to-1 Click Mapping
+  $('#carousel').on('click', '.slides > li', function(e) {
+    e.preventDefault();
+    var targetIndex = $(this).index();
+    $('#slider').flexslider(targetIndex);
+    $('#carousel').flexslider(targetIndex);
   });
 
 });
