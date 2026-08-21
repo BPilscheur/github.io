@@ -83,29 +83,42 @@
 		.video-outer {
 			position: relative;
 			display: flex;
-			gap: 20px;
-			align-items: flex-start;
+			gap: 25px;
+			align-items: center;
 		}
 
 		#slider {
 			flex: 1;
 			margin-bottom: 0;
+			background: transparent;
+			border: none;
+		}
+
+		#slider .slides iframe {
+			width: 100%;
+			height: 380px;
+			border: 0;
 		}
 
 		#carousel {
-			width: 160px;
+			width: 170px;
 			position: relative;
 			margin-bottom: 0;
+			padding: 35px 0;
+			background: transparent;
+			border: none;
 		}
 
 		#carousel .slides li {
 			cursor: pointer;
-			opacity: 0.6;
-			transition: opacity 0.3s ease;
-			margin-bottom: 15px;
+			opacity: 0.5;
+			transition: all 0.3s ease;
+			margin-bottom: 12px;
 			border: 2px solid transparent;
+			box-sizing: border-box;
 		}
 
+		#carousel .slides li:hover,
 		#carousel .slides li.flex-active-slide {
 			opacity: 1;
 			border-color: #007cba;
@@ -113,9 +126,10 @@
 
 		#carousel .slides img {
 			width: 100%;
-			height: 100px;
+			height: 95px;
 			object-fit: cover;
 			display: block;
+			pointer-events: auto;
 		}
 
 		#carousel .flex-direction-nav {
@@ -124,54 +138,84 @@
 			padding: 0;
 		}
 
-		#carousel .flex-direction-nav a {
-			display: block;
-			width: 30px;
-			height: 30px;
+		#carousel .flex-direction-nav li {
 			margin: 0;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			z-index: 10;
-			overflow: hidden;
-			opacity: 0.8;
-			background: rgba(0, 0, 0, 0.6);
-			color: #fff;
-			text-align: center;
-			line-height: 30px;
-			text-decoration: none;
-			border-radius: 50%;
-			font-size: 0;
+		}
+
+		#carousel .flex-direction-nav a {
+			display: block !important;
+			width: 32px !important;
+			height: 32px !important;
+			position: absolute !important;
+			left: 50% !important;
+			transform: translateX(-50%) !important;
+			z-index: 9999 !important;
+			opacity: 1 !important;
+			background: #007cba !important;
+			color: #ffffff !important;
+			text-align: center !important;
+			line-height: 32px !important;
+			text-decoration: none !important;
+			border-radius: 50% !important;
+			font-size: 0 !important;
+			cursor: pointer !important;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 		}
 
 		#carousel .flex-direction-nav a:hover {
-			opacity: 1;
+			background: #005a87 !important;
 		}
 
 		#carousel .flex-direction-nav a.flex-prev {
-			top: -35px;
+			top: 0px !important;
 		}
 
 		#carousel .flex-direction-nav a.flex-prev::before {
-			content: '▲';
-			font-size: 14px;
+			content: '▲' !important;
+			font-size: 13px !important;
+			color: #fff !important;
+			display: block !important;
+			line-height: 32px !important;
 		}
 
 		#carousel .flex-direction-nav a.flex-next {
-			bottom: -35px;
+			bottom: 0px !important;
+			top: auto !important;
 		}
 
 		#carousel .flex-direction-nav a.flex-next::before {
-			content: '▼';
-			font-size: 14px;
+			content: '▼' !important;
+			font-size: 13px !important;
+			color: #fff !important;
+			display: block !important;
+			line-height: 32px !important;
 		}
 
 		@media (max-width: 767px) {
 			.video-outer {
-				flex-direction: column;
+				flex-direction: column-reverse;
 			}
 			#carousel {
 				width: 100%;
+				padding: 0 35px;
+			}
+			#carousel .flex-direction-nav a.flex-prev {
+				top: 50% !important;
+				left: 0 !important;
+				transform: translateY(-50%) !important;
+			}
+			#carousel .flex-direction-nav a.flex-prev::before {
+				content: '◄' !important;
+			}
+			#carousel .flex-direction-nav a.flex-next {
+				bottom: auto !important;
+				top: 50% !important;
+				left: auto !important;
+				right: 0 !important;
+				transform: translateY(-50%) !important;
+			}
+			#carousel .flex-direction-nav a.flex-next::before {
+				content: '►' !important;
 			}
 		}
 	</style>
@@ -634,7 +678,7 @@
         </div>
     </section>
 
-    <!-- Complete Uncut Video Section with FlexSlider Structure -->
+    <!-- Fixed Video Section with Restored FlexSlider Navigation & Controls -->
     <section class="video-sec">
         <div class="container">
             <h1>Soraytec Company Presentation</h1>
@@ -656,8 +700,8 @@
 
                 <div id="carousel" class="flexslider thumbnail">
                     <ul class="slides">
-                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg" class="img-fluid" alt="Slide Thumbnail 1"></li> 
-						<li><img src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png" class="img-fluid" alt="Slide Thumbnail 2"></li>               
+                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png" class="img-fluid" alt="Slide Thumbnail 1"></li>  
+                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg" class="img-fluid" alt="Slide Thumbnail 2"></li>              
                     </ul>
                 </div>
             </div>
@@ -739,12 +783,27 @@
 
 <script>
 jQuery(document).ready(function($) {
+    // Initialize thumbnail slider first for FlexSlider target binding
+    $('#carousel').flexslider({
+        animation: "slide",
+        direction: $(window).width() <= 767 ? "horizontal" : "vertical",
+        controlNav: false,
+        directionNav: true,
+        animationLoop: false,
+        slideshow: false,
+        itemHeight: 95,
+        itemMargin: 12,
+        asNavFor: '#slider'
+    });
+
+    // Initialize main slider second with synchronized navigation
     $('#slider').flexslider({
         animation: "slide",
         controlNav: false,
         directionNav: false,
         animationLoop: false,
         slideshow: false,
+        sync: "#carousel",
         before: function(slider) {
             $('.youtube-video iframe').each(function() {
                 this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
@@ -752,16 +811,10 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('#carousel').flexslider({
-        animation: "slide",
-        direction: "vertical",
-        controlNav: false,
-        directionNav: true,
-        animationLoop: false,
-        slideshow: false,
-        itemHeight: 100,
-        itemMargin: 15,
-        asNavFor: '#slider'
+    // Ensure direct thumbnail clicks switch main video correctly
+    $('#carousel').on('click', '.slides li', function() {
+        var index = $(this).index();
+        $('#slider').flexslider(index);
     });
 });
 </script>
