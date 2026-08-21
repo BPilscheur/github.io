@@ -1018,41 +1018,40 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 <!-- 3. FlexSlider & YouTube Click Handler Initialization -->
     <script>
-      $(document.body).ready(function() {
-        
-        // Initialize Thumbnail Carousel
-        $('#carousel').flexslider({
-          animation: "slide",
-          controlNav: false,
-          animationLoop: false,
-          slideshow: false,
-          itemWidth: 171,
-          itemMargin: 10,
-          asNavFor: '#slider'
-        });
+$(document.body).ready(function() {
+  
+  // Initialize Thumbnail Carousel vertically
+  $('#carousel').flexslider({
+    animation: "slide",
+    direction: "vertical", // <-- Change to vertical
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemMargin: 15,        // <-- Vertical margin between items
+    asNavFor: '#slider'
+  });
 
-        // Initialize Main Video Slider
-        $('#slider').flexslider({
-          animation: "slide",
-          controlNav: false,
-          animationLoop: false,
-          slideshow: false,
-          sync: "#carousel",
-          before: function(slider) {
-            // Pause any running YouTube iframe videos when changing slides
-            $('.youtube-video iframe').each(function() {
-              this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            });
-          }
-        });
-
-        // Ensure direct click events fire cleanly on thumbnail items
-        $('#carousel .slides').on('click', 'li', function(e) {
-          var index = $(this).index();
-          $('#slider').flexslider(index);
-        });
-
+  // Initialize Main Video Slider
+  $('#slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel",
+    before: function(slider) {
+      $('.youtube-video iframe').each(function() {
+        this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
       });
+    }
+  });
+
+  // Ensure direct click events fire cleanly on thumbnail items
+  $('#carousel .slides').on('click', 'li', function(e) {
+    var index = $(this).index();
+    $('#slider').flexslider(index);
+  });
+
+});
     </script>
 </body>
 </html>
