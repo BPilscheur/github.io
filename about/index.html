@@ -78,13 +78,13 @@
 	<link rel="stylesheet" id="newsletter-css" href="https://soraytec.com/wp-content/plugins/newsletter/style.css?ver=9.2.6" media="all">
 	<link rel="stylesheet" id="wp-block-paragraph-css" href="https://soraytec.com/wp-includes/blocks/paragraph/style.min.css?ver=7.0" media="all">
 
-	<!-- Vertical Carousel & Arrow CSS Fixes -->
+	<!-- Native 16:9 Aspect Ratio & Responsive Heights Fixes -->
 	<style>
 		.video-outer {
 			position: relative;
 			display: flex;
-			gap: 25px;
-			align-items: center;
+			gap: 20px;
+			align-items: stretch;
 		}
 
 		#slider {
@@ -92,27 +92,48 @@
 			margin-bottom: 0;
 			background: transparent;
 			border: none;
+			position: relative;
+			aspect-ratio: 16 / 9;
+			max-height: 400px;
+		}
+
+		#slider .youtube-video {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+			overflow: hidden;
 		}
 
 		#slider .slides iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: 380px;
+			height: 100%;
 			border: 0;
+			display: block;
 		}
 
 		#carousel {
-			width: 170px;
+			width: 180px;
 			position: relative;
 			margin-bottom: 0;
-			padding: 35px 0;
+			padding: 28px 0;
+			box-sizing: border-box;
 			background: transparent;
 			border: none;
+			overflow: hidden;
+		}
+
+		#carousel .flex-viewport {
+			height: 100% !important;
 		}
 
 		#carousel .slides li {
 			cursor: pointer;
-			opacity: 0.5;
-			transition: all 0.3s ease;
+			opacity: 0.6;
+			transition: all 0.2s ease;
 			margin-bottom: 12px;
 			border: 2px solid transparent;
 			box-sizing: border-box;
@@ -129,7 +150,6 @@
 			height: 95px;
 			object-fit: cover;
 			display: block;
-			pointer-events: auto;
 		}
 
 		#carousel .flex-direction-nav {
@@ -138,28 +158,24 @@
 			padding: 0;
 		}
 
-		#carousel .flex-direction-nav li {
-			margin: 0;
-		}
-
 		#carousel .flex-direction-nav a {
-			display: block !important;
-			width: 32px !important;
-			height: 32px !important;
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			width: 100% !important;
+			height: 22px !important;
 			position: absolute !important;
-			left: 50% !important;
-			transform: translateX(-50%) !important;
+			left: 0 !important;
+			right: 0 !important;
 			z-index: 9999 !important;
 			opacity: 1 !important;
 			background: #007cba !important;
 			color: #ffffff !important;
 			text-align: center !important;
-			line-height: 32px !important;
 			text-decoration: none !important;
-			border-radius: 50% !important;
 			font-size: 0 !important;
 			cursor: pointer !important;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			border-radius: 4px;
 		}
 
 		#carousel .flex-direction-nav a:hover {
@@ -172,10 +188,8 @@
 
 		#carousel .flex-direction-nav a.flex-prev::before {
 			content: '▲' !important;
-			font-size: 13px !important;
+			font-size: 11px !important;
 			color: #fff !important;
-			display: block !important;
-			line-height: 32px !important;
 		}
 
 		#carousel .flex-direction-nav a.flex-next {
@@ -185,34 +199,44 @@
 
 		#carousel .flex-direction-nav a.flex-next::before {
 			content: '▼' !important;
-			font-size: 13px !important;
+			font-size: 11px !important;
 			color: #fff !important;
-			display: block !important;
-			line-height: 32px !important;
+		}
+
+		#carousel .flex-direction-nav a.flex-disabled {
+			opacity: 0.3 !important;
+			cursor: default !important;
 		}
 
 		@media (max-width: 767px) {
 			.video-outer {
 				flex-direction: column-reverse;
 			}
+			#slider {
+				aspect-ratio: 16 / 9;
+			}
 			#carousel {
 				width: 100%;
-				padding: 0 35px;
+				height: 110px;
+				padding: 0 30px;
+			}
+			#carousel .flex-direction-nav a {
+				width: 22px !important;
+				height: 100% !important;
 			}
 			#carousel .flex-direction-nav a.flex-prev {
-				top: 50% !important;
+				top: 0 !important;
 				left: 0 !important;
-				transform: translateY(-50%) !important;
+				right: auto !important;
 			}
 			#carousel .flex-direction-nav a.flex-prev::before {
 				content: '◄' !important;
 			}
 			#carousel .flex-direction-nav a.flex-next {
-				bottom: auto !important;
-				top: 50% !important;
+				bottom: 0 !important;
+				top: 0 !important;
 				left: auto !important;
 				right: 0 !important;
-				transform: translateY(-50%) !important;
 			}
 			#carousel .flex-direction-nav a.flex-next::before {
 				content: '►' !important;
@@ -220,7 +244,7 @@
 		}
 	</style>
 
-	<!-- Enqueued WordPress JavaScript Dependencies -->
+	<!-- Enqueued JavaScript Dependencies -->
 	<script id="jquery-core-js" src="https://soraytec.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 	<script id="jquery-migrate-js" src="https://soraytec.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 	<script id="soraytec-bootstrap-script-js" src="https://soraytec.com/wp-content/themes/soraytec/js/bootstrap.bundle.min.js?ver=1"></script>
@@ -417,7 +441,7 @@
                 </ul>
             </div>
 
-            <!-- Complete Uncut Scrollable Timeline Nav -->
+            <!-- Scrollable Timeline Nav -->
             <div id="content-6" class="content horizontal-images">
                 <ul class="timeline">
                     <li>
@@ -678,7 +702,7 @@
         </div>
     </section>
 
-    <!-- Fixed Video Section with Restored FlexSlider Navigation & Controls -->
+    <!-- Corrected Aspect Ratio Video Section -->
     <section class="video-sec">
         <div class="container">
             <h1>Soraytec Company Presentation</h1>
@@ -687,12 +711,12 @@
                     <ul class="slides">
                         <li>
                             <div class="youtube-video">
-                                <iframe width="640" height="360" src="https://www.youtube.com/embed/RGQ7Sg0PmLc?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+                                <iframe src="https://www.youtube.com/embed/RGQ7Sg0PmLc?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
                             </div>
                         </li>                            
                         <li>
                             <div class="youtube-video">
-                                <iframe width="640" height="360" src="https://www.youtube.com/embed/aqarrqXzPD4?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+                                <iframe src="https://www.youtube.com/embed/aqarrqXzPD4?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
                             </div>
                         </li>                
                     </ul>
@@ -700,8 +724,8 @@
 
                 <div id="carousel" class="flexslider thumbnail">
                     <ul class="slides">
-                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png" class="img-fluid" alt="Slide Thumbnail 1"></li>  
-                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg" class="img-fluid" alt="Slide Thumbnail 2"></li>              
+                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/thuumbnail.jpg" class="img-fluid" alt="Video 1 Thumbnail"></li>
+                        <li><img src="https://soraytec.com/wp-content/uploads/2025/01/Closing-Slide.png" class="img-fluid" alt="Video 2 Thumbnail"></li>  
                     </ul>
                 </div>
             </div>
@@ -783,7 +807,16 @@
 
 <script>
 jQuery(document).ready(function($) {
-    // Initialize thumbnail slider first for FlexSlider target binding
+    function adjustCarouselHeight() {
+        if ($(window).width() > 767) {
+            var sliderHeight = $('#slider').outerHeight();
+            $('#carousel').height(sliderHeight);
+        } else {
+            $('#carousel').css('height', 'auto');
+        }
+    }
+
+    // 1. Initialize Thumbnail Slider
     $('#carousel').flexslider({
         animation: "slide",
         direction: $(window).width() <= 767 ? "horizontal" : "vertical",
@@ -796,7 +829,7 @@ jQuery(document).ready(function($) {
         asNavFor: '#slider'
     });
 
-    // Initialize main slider second with synchronized navigation
+    // 2. Initialize Main Video Slider
     $('#slider').flexslider({
         animation: "slide",
         controlNav: false,
@@ -804,6 +837,9 @@ jQuery(document).ready(function($) {
         animationLoop: false,
         slideshow: false,
         sync: "#carousel",
+        start: function() {
+            adjustCarouselHeight();
+        },
         before: function(slider) {
             $('.youtube-video iframe').each(function() {
                 this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
@@ -811,10 +847,14 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Ensure direct thumbnail clicks switch main video correctly
+    $(window).on('resize', function() {
+        adjustCarouselHeight();
+    });
+
+    // 3. Precise Thumbnail Click Binding
     $('#carousel').on('click', '.slides li', function() {
-        var index = $(this).index();
-        $('#slider').flexslider(index);
+        var idx = $(this).index();
+        $('#slider').flexslider(idx);
     });
 });
 </script>
